@@ -8,7 +8,6 @@
     <p class="todo__description">{{ todo.description }}</p>
     <p class="todo__deadline">
       Дата deadline'a: <span> {{ todo.deadline | formatDate }} </span>
-      Дата : <span> {{ todo.created_at | formatDate }} </span>
     </p>
     <div class="todo__bottom">
       <span @click="remove">Удалить</span>     
