@@ -35,14 +35,11 @@ export default {
     addTodo() {
       if (!this.title || !this.description || !this.deadline) return;
           
-      let today = new Date().toLocaleDateString();
-      let checkDate = new Date(this.deadline).toLocaleDateString()
-      
-      if(checkDate < today ) {
-        alert('Дата некорректна')
+      if(new Date(this.deadline).setHours(23,59) < Date.now()) {
+        alert('Ваша дата некорректна')
         this.deadline = ""
-      }else{      
-          this.$store.commit("ADD_TODO", {
+      } else {
+        this.$store.commit("ADD_TODO", {
           title: this.title,
           description: this.description,
           created_at: Date.now(),
@@ -51,7 +48,7 @@ export default {
           deadline: new Date(this.deadline).setHours(23,59).valueOf(),
         })
         this.toHomePage();
-      }
+      }     
     },
     
     toHomePage() {

@@ -1,6 +1,5 @@
 <template>
   <div class="todo">
-    <span>  </span>
     <div class="todo__header">
       <span @click="open">Открыть</span>     
     </div>
