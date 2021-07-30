@@ -11,7 +11,6 @@
       <input v-model="deadline" type="date" />
       <button type="submit">Добавить</button>
       <button @click="toHomePage">Отмена</button>
-      <button @click="check">Проверка</button>
     </form>
   </section>
 </template>
@@ -54,10 +53,6 @@ export default {
     toHomePage() {
       this.$router.push({ name: "HomePage" });
     },
-
-    check() {
-      console.log(Number);
-    }
   },
 };
 </script>

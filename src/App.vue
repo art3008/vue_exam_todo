@@ -28,7 +28,7 @@ export default {
     if (todos) {
       this.$store.commit("SET_TODOS", JSON.parse(todos));
     }
-    window.addEventListener("beforeunload", this.saveDatas);
+    // window.addEventListener("beforeunload", this.saveDatas);
     
   },
 
