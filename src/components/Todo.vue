@@ -28,6 +28,9 @@ export default {
     idx: Number
   },
   
+  
+
+
   computed:{
     todoList() {
       return this.$store.state.todoList;
